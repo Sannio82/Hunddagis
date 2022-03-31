@@ -18,6 +18,9 @@ import React, { useEffect } from 'react';
         .then (response => response.json())
         .then (setDogs);     
     }, []);
+
+     {dogs.map(dog =>
+          <div key={dog.chipNumber}>{dog.name}</div>)};
       
   const WELCOME = 'welcome', ALLDOGS = 'alldogs', DOGINFO = 'doginfo';
   const [currentScreen, setCurrentScreen] = useState(WELCOME);
@@ -30,8 +33,7 @@ import React, { useEffect } from 'react';
       content = <Welcome nextScreen={() => setCurrentScreen(ALLDOGS)} /> 
       break;
     case ALLDOGS:
-      content = <AllDogs showAllDogs={dogs.map(dog =>
-        <div key={dog.chipNumber}>{dog.name}</div>)}  showDogInfo={() => setCurrentScreen(DOGINFO)} />
+      content = <AllDogs dogs={dogs}  showDogInfo={() => setCurrentScreen(DOGINFO)} />
       break;
     case DOGINFO:
       content = <DogInfo startWelcome={() => setCurrentScreen(WELCOME)} />
@@ -44,8 +46,7 @@ import React, { useEffect } from 'react';
       </header>
       <main> 
         <div>
-          {dogs.map(dog =>
-          <div key={dog.chipNumber}>{dog.name}</div>)}
+      
         </div>
         {content}
       </main>
