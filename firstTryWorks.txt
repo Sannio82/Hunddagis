@@ -1,0 +1,53 @@
+class AllDogs extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            dogs: [],
+            isLoaded: false,
+        }
+    }
+
+    componentDidMount() {
+
+        fetch('https://api.jsonbin.io/b/6087d9c3f6655022c46d0b41')
+            .then(res => res.json())
+            .then(json => {
+                this.setState({
+                    isLoaded: true, 
+                    dogs: json,
+                })
+            });
+    }
+
+    render() {
+
+        var { isLoaded, dogs } = this.state;
+
+        if (!isLoaded) {
+            return <div>Loading...</div>;
+        } else {
+
+            return (
+            <div className='AllDogs'>
+               <ul>
+                   {dogs.map(dog => (
+                       <li key={dog.chipNumber}>
+                           {dog.name} 
+                           
+                       </li>
+                   ))};
+               </ul>
+            </div>
+            );
+        }
+
+        return (
+            <div className='AllDogs'>
+
+            </div>
+        );
+    }
+}
+
+    export default AllDogs;
