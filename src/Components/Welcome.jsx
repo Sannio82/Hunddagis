@@ -1,11 +1,15 @@
-const Welcome = ({nextScreen}) => {
+import {  Link } from 'react-router-dom';
+
+const Welcome = () => {
     return (
-        <section>
+        <div>
             <h2>Välkommen till mitt lilla hunddagis!</h2>
-            <button onClick={nextScreen}>Ja tack!</button>
             <p>Vill du fortsätta till nästa sida för att se alla våra små hundar?</p>
+            <Link to="/alldogs">
+            <button>Ja tack!</button>
+            </Link>
             
-        </section>
+        </div>
     )
 }
 
