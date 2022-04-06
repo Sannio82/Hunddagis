@@ -61,7 +61,7 @@ import { HashRouter as Router, Route, Routes } from 'react-router-dom';
             <Route path="/alldogs" element={
               <AllDogs dogs = {dogs} />
             } />
-            <Route path="/doginfo" element={
+            <Route path="/alldogs/:chipNumber" element={
               <DogInfo selectedDog = {dogs.name} />
             } />
           </Routes>

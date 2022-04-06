@@ -1,4 +1,5 @@
 .dogs {
+    display: flex;
     background-color: darksalmon;
     
 }
@@ -10,3 +11,17 @@ body {
 .dog {
     color:darkcyan
 }
+
+.dogs_card {
+    display: flex;
+    flex-direction: column-reverse;
+    width: fit-content;
+    margin-top: 40px;
+    border: 1px solid aquamarine;
+    padding: 20px; 
+}
+
+.dogs_card p{
+    margin-bottom: 10px;
+}
+
