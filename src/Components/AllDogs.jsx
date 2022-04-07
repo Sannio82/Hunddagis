@@ -1,16 +1,14 @@
-
 import './Components.css';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const AllDogs = ({dogs, showDogInfo}) => {
   console.log('hej hej!')
 
-
-  let selectedDog = null
     return (
-      <div className='Dogs'>
+     <div className="dogs_list">
+      {/* // <div className='Dogs'> */}
         <h1>Alla hundar</h1>
-        <div className="dogs_list">
+       
           {
             dogs && dogs.map((dog)=>(           
               // varje hunds unika kort
@@ -25,7 +23,7 @@ const AllDogs = ({dogs, showDogInfo}) => {
         </center>
             ))
           }
-        </div>
+        {/* </div> */}
       </div>   
     )
 

@@ -29,9 +29,9 @@ import { HashRouter as Router, Route, Routes } from 'react-router-dom';
     
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
          <h1>Sannas hunddagis</h1> 
-         </header>
+         </header> */}
         <main>
           <Router>
           <Routes>
