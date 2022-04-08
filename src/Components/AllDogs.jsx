@@ -30,7 +30,7 @@ const AllDogs = ({dogs, showDogInfo}) => {
         value={name}
         onChange={filter}
         className="input"
-        placeholder="Sök"
+        placeholder="Sök hund"
         />
          <h1>Alla hundar</h1>
         <div className="dogs_list" >      
