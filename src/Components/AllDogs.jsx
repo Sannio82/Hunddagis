@@ -30,23 +30,22 @@ const AllDogs = ({dogs, showDogInfo}) => {
         value={name}
         onChange={filter}
         className="input"
-        placeholder="Filter"
+        placeholder="Sök"
         />
-        <div className="dogs_list">
-        <h1>Alla hundar</h1>
-       
+         <h1>Alla hundar</h1>
+        <div className="dogs_list" >      
           {foundDogs && foundDogs.length > 0? (
             foundDogs.map((dog)=>(           
               // varje hunds unika kort
-              <center>
-              <div className='dogs_card' key={dog.chipNumber} >
-                <div className='container'>
+             
+              <div className='dogs_card' key={dog.chipNumber}>
+        
                 <Link to={`/doginfo/${dog.chipNumber}`}>
                 <p>{dog.name}</p>
                 </Link>   
-                </div>            
+                           
         </div>
-        </center>
+ 
             ))
           ):(
             <h1>No results found!</h1>
