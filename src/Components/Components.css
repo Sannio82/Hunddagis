@@ -56,7 +56,7 @@ body, html {
   
   
   .dogs_card :hover {
-  
+    opacity: 0.9;
   }
   
   .container {
