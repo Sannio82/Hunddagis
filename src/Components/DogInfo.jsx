@@ -18,21 +18,22 @@ const DogInfo = ({dogs}) => {
     });
 
     return (
-            <div>
-                 <h1>{selectedDog.name}</h1> 
-            {/* {dogs.map(dog=>( */}
+            <div className='alldogsbackground'>
+                        <img src={selectedDog.img} alt="Selected dog"/>              
         <div className='selectedDogCard' key={selectedDog.chipNumber} >      
         <div className='container'>        
-            <img src={selectedDog.img} alt="Selected dog" />
+                 <h2>{selectedDog.name}</h2> 
                <p>Jag heter {selectedDog.name} och jag är {selectedDog.age} år gammal! </p>
-               <p>Jag är just nu inne:&nbsp;{selectedDog.present ? "true" : "false" }</p>
-               <p>Min ägare är {selectedDog.owner.name}&nbsp;{selectedDog.owner.lastName}</p>
-               <p>Om ni behöver kontakta henne så har hon telefonnummer:&nbsp;{selectedDog.owner.phoneNumber}</p>
+              <p>Jag är&nbsp;{selectedDog.present ? "inne på dagis." : "inte här på dagis just nu." }</p>
+               <p>Min ägare är {selectedDog.owner.name}&nbsp;{selectedDog.owner.lastName}&nbsp;och har telefonnummer: {selectedDog.owner.phoneNumber}</p>
                </div>    
             </div>
             <Link to="/welcome">
             <button className='button'>Gå tillbaka till startsidan</button>
-            </Link>    
+            </Link> 
+            <Link to="/alldogs">
+            <button className='button'>Se alla hundar</button>
+            </Link> 
         </div>
     )
  }

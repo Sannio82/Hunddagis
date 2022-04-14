@@ -23,7 +23,7 @@ const AllDogs = ({dogs, showDogInfo}) => {
   }
 
     return (
-      <div className='container'>
+      <div className='alldogsbackground'>
     
        <input
         type="search"
@@ -41,7 +41,7 @@ const AllDogs = ({dogs, showDogInfo}) => {
               <div className='dogs_card' key={dog.chipNumber}>
         
                 <Link to={`/doginfo/${dog.chipNumber}`}>
-                <p>{dog.name}</p>
+                <p className='dogName'>{dog.name}</p>
                 </Link>   
                            
         </div>
