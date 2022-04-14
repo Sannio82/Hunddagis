@@ -8,6 +8,8 @@ const AllDogs = ({dogs, showDogInfo}) => {
 
   const [foundDogs, setFoundDogs] = useState(dogs);
 
+  const present = false 
+
   const filter = (e) => {
     const keyword = e.target.value;
 
@@ -21,7 +23,6 @@ const AllDogs = ({dogs, showDogInfo}) => {
     }
     setName(keyword);
   }
-
     return (
       <div className='alldogsbackground'>
     
@@ -35,17 +36,12 @@ const AllDogs = ({dogs, showDogInfo}) => {
          <h1>Alla hundar</h1>
         <div className="dogs_list" >      
           {foundDogs && foundDogs.length > 0? (
-            foundDogs.map((dog)=>(           
-              // varje hunds unika kort
-             
-              <div className='dogs_card' key={dog.chipNumber}>
-        
+            foundDogs.map((dog)=>(                     
+              <div className='dogs_card' key={dog.chipNumber}>       
                 <Link to={`/doginfo/${dog.chipNumber}`}>
                 <p className='dogName'>{dog.name}</p>
-                </Link>   
-                           
+                </Link>                              
         </div>
- 
             ))
           ):(
             <h1>No results found!</h1>
@@ -54,27 +50,5 @@ const AllDogs = ({dogs, showDogInfo}) => {
       </div>  
       </div> 
     )
-
 }
-
 export default AllDogs;
-
-{/* <div className="dogs_list">
-<h1>Alla hundar</h1>
-
-  {
-    dogs && dogs.map((dog)=>(           
-      // varje hunds unika kort
-      <center>
-      <div className='dogs_card' key={dog.chipNumber} >
-        <div className='container'>
-        <Link to={`/doginfo/${dog.chipNumber}`}>
-        <p>{dog.name}</p>
-        </Link>   
-        </div>            
-</div>
-</center>
-    ))
-  }
-{/* </div> */}
-// </div>  */}
