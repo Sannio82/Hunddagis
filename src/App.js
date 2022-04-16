@@ -1,6 +1,4 @@
-import logo from './logo.svg';
 import './App.css';
-import DogDayCare from './records.json';
 import { useState } from 'react';
 import Welcome from './Components/Welcome';
 import AllDogs from './Components/AllDogs';
@@ -9,11 +7,7 @@ import React, { useEffect } from 'react';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 
 
-    function App() {
-
-      
-      let content = null;
-     // content = <Welcome />    
+    function App() {     
       const [dogs, setDogs] = useState([]);
 
     useEffect(() => {
@@ -23,15 +17,9 @@ import { HashRouter as Router, Route, Routes } from 'react-router-dom';
         .then (response => response.json())
         .then (setDogs);    
     }, []);
-
-     const dog = () => {dogs.map(dog =>
-          <div key={dog.chipNumber}>{dog.name}</div>)};
     
   return (
     <div className="App">
-      {/* <header className="App-header">
-         <h1>Sannas hunddagis</h1> 
-         </header> */}
         <main>
           <Router>
           <Routes>
@@ -47,52 +35,11 @@ import { HashRouter as Router, Route, Routes } from 'react-router-dom';
             <Route path="/doginfo/:chipNumber" element={
               <DogInfo dogs = {dogs}/>
             } />
-          </Routes>
-         
-        {/* {content} */}
-        
+          </Routes>       
     </Router>
     </main>
     </div>
   );
 }
 
-
-
 export default App;
-
-
-// useEffect(() => {
-//   const url = "https://api.jsonbin.io/b/6087d9c3f6655022c46d0b41";
-
-//   const fetchData = async() => {
-//     try {
-//       const response = await fetch(url);
-//       const json = await response.json();
-//       console.log(json);
-//     } catch (error) {
-//       console.log("error", error);
-//     }
-//   };
-
-//   fetchData();
-  
-// }, []);
- // Detta används om vi ej ska använda routes.
-  // const WELCOME = 'welcome', ALLDOGS = 'alldogs', DOGINFO = 'doginfo';
-  // const [currentScreen, setCurrentScreen] = useState(WELCOME);
-
-  // content är ju det här som bestämmer vad som ska visas upp på alla sidor.
-  // Detta sätts nere i appdelen och ändras beroende på vilket state [currentScreen]
-  // som vi använder oss av just då. 
- 
-  // switch(currentScreen) {
-  //   case WELCOME:
-  //     content = <Welcome nextScreen={() => setCurrentScreen(ALLDOGS)} /> 
-  //     break;
-  //   case ALLDOGS:
-  //     content = <AllDogs dogs={dogs}  showDogInfo={() => setCurrentScreen(DOGINFO)} />
-  //     break;
-  //   case DOGINFO:
-  //     content = <DogInfo startWelcome={() => setCurrentScreen(WELCOME)} />
-  // }

@@ -8,7 +8,6 @@ const DogInfo = ({dogs}) => {
     console.log(params.chipNumber)
 
     let selectedDog = null
-    let present = null
 
     dogs.forEach(dog => {
         if (dog.chipNumber === params.chipNumber) {
@@ -20,16 +19,14 @@ const DogInfo = ({dogs}) => {
     return (
             <div className='alldogsbackground'>
                         <img src={selectedDog.img} alt="Selected dog"/> 
-                        <center>               
-        <div className='selectedDogCard' key={selectedDog.chipNumber} >  
-       
+            <center>               
+        <div className='selectedDogCard' key={selectedDog.chipNumber} >        
         <div className='container'>        
                  <h2>{selectedDog.name}</h2> 
                <p>Jag heter {selectedDog.name} och jag är {selectedDog.age} år gammal! </p>
               <p>Jag är&nbsp;{selectedDog.present ? "inne på dagis." : "inte här på dagis just nu." }</p>
                <p>Min ägare är {selectedDog.owner.name}&nbsp;{selectedDog.owner.lastName}&nbsp;och har telefonnummer: {selectedDog.owner.phoneNumber}</p>
-               </div>  
-                 
+               </div>                  
             </div>
             </center> 
             <Link to="/welcome">
