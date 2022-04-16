@@ -1,17 +1,16 @@
 {
   "files": {
-    "main.css": "/Hunddagis/static/css/main.c813ae15.css",
-    "main.js": "/Hunddagis/static/js/main.f811eb74.js",
+    "main.css": "/Hunddagis/static/css/main.ce610726.css",
+    "main.js": "/Hunddagis/static/js/main.5c64eea6.js",
     "static/js/787.3f24574d.chunk.js": "/Hunddagis/static/js/787.3f24574d.chunk.js",
     "static/media/rottweiler1.jpg": "/Hunddagis/static/media/rottweiler1.d67ab475afdfbd25d719.jpg",
-    "static/media/logo.svg": "/Hunddagis/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Hunddagis/index.html",
-    "main.c813ae15.css.map": "/Hunddagis/static/css/main.c813ae15.css.map",
-    "main.f811eb74.js.map": "/Hunddagis/static/js/main.f811eb74.js.map",
+    "main.ce610726.css.map": "/Hunddagis/static/css/main.ce610726.css.map",
+    "main.5c64eea6.js.map": "/Hunddagis/static/js/main.5c64eea6.js.map",
     "787.3f24574d.chunk.js.map": "/Hunddagis/static/js/787.3f24574d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c813ae15.css",
-    "static/js/main.f811eb74.js"
+    "static/css/main.ce610726.css",
+    "static/js/main.5c64eea6.js"
   ]
 }
